@@ -14,11 +14,11 @@ class MyMath {
     }
 
     public static PerformOperation isPrime(){
-        return (int n) -> 
+        return (int n) -> java.math.BigInteger.valueOf(n).isProbablePrime(1);
     }
 
     public static PerformOperation isPalindrome(){
-        return (int n) -> n%2 != 0;
+        return (int n) -> Integer.toString(n).equals(new StringBuilder(Integer.toString(n)).reverse().toString());
     }
 }
 
