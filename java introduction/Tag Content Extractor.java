@@ -14,13 +14,13 @@ public class Solution{
 			
           	//Write your code here
               boolean matchFound = false;
-              String regex = "<(.+)>([^<]+)</\\1>";
+              String regex = "<(.+)>([^<]+)</\\1>"; // () defines the group that are later called
               Pattern p = Pattern.compile(regex);
               Matcher m = p.matcher(line);
 
         
             while (m.find()) {
-                System.out.println(m.group(2));
+                System.out.println(m.group(2)); // means the content of the second paranthesis
                 matchFound = true;
             }
             if ( ! matchFound) {
